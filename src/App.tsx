@@ -33,15 +33,15 @@ function MyMapComponent({
   setMap,
   heading,
 }: {
-  center: any;
+  center: { lat: number; lng: number };
   zoom: number;
   setHeading: Function;
-  heading: any;
+  heading: number;
   map: any;
   setMap: Function;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const google: any = (window as any).google;
+  const google = (window as any).google;
 
   useEffect(() => {
     const panorama = new google.maps.StreetViewPanorama(ref.current, {

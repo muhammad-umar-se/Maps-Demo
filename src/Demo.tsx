@@ -40,7 +40,6 @@ export const Wrapper = ({
   }, []);
 
   if (status === Status.SUCCESS && children) {
-    console.log("here", children);
     return <div id="map-canvas">{children} </div>;
   }
 
